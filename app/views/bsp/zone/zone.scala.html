@@ -1,0 +1,127 @@
+@import resources._
+@nav(titlePage = "Zona de trabajo Contalcob"){
+
+				
+				<!--Page Title-->
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<div id="page-title">
+					<h1 id="page-title-txt" class="page-header text-overflow">Crear Zona de trabajo</h1>
+				</div>
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<!--End page title-->
+
+				<!--Page content-->
+				<!--===================================================-->
+				<div id="page-content">					
+					<div class="row">
+						<div class="col-lg-7">
+							<div class="panel">					
+								<form id="zone-frm" action="/save-zone" class="form-horizontal">
+									<div class="panel-body">					
+										<!--business data-->
+										<!--===================================================-->
+										<div class="panel-heading">
+											<h3 class="panel-title">Datos de la zona</h3>
+										</div>
+										<fieldset>
+											<div class="form-group">
+												<label class="col-lg-3 control-label">Nombre de Zona</label>
+												<div class="col-lg-7">
+													<input type="text" class="form-control" id="zoneName" name="zoneName" placeholder="Nombre de Zona">
+												</div>
+											</div>										
+                                            <div class="form-group">
+												<label class="col-lg-3 control-label">Descripci&oacute;n de Zona</label>
+												<div class="col-lg-7">
+													<textarea rows="4" cols="50"  class="form-control" id="zoneDescription" name="zoneDescription" placeholder="Descripci&oacute;n de Zona"></textarea>
+												</div>
+											</div>										
+										</fieldset>
+										<!--===================================================-->
+					
+
+										<!--location data-->
+										<!--===================================================-->
+										<hr>
+										<h4 class="mar-btm text-thin">Datos de Ubicaci&oacute;n</h4>
+                                        @form.set.location.location()										
+										<!--===================================================-->
+					                     <input type="hidden" id="zoneId" name="zoneId" value="0">					                     
+									</div>	
+									<div class="panel-footer">
+										<div class="row">
+											<div class="col-lg-12">
+												<button id="save-zone-btn" class="btn btn-primary btn-labeled fa fa-send fa-lg pull-right" type="submit">Guardar Datos</button>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<!-- widgets -->
+					   <div class="col-lg-5">
+					   	  <div class="row">
+					   	  	<!--clients-->
+					   	  	<div class="col-md-12 col-lg-12">								
+								<div class="panel media pad-all">
+									<div class="media-left">
+										<span class="icon-wrap icon-wrap-sm icon-circle bg-primary">
+										<i class="fa fa-user fa-2x"></i>
+										</span>
+									</div>
+									<div class="media-body">
+										<p class="text-2x mar-no text-thin">241</p>
+										<p class="text-muted mar-no">Clientes por Zona</p>
+									</div>
+								</div>					
+						     </div>
+						     <!-- end clients -->
+					   	  	<!--lendings-->
+					   	  	<div class="col-md-12 col-lg-12">								
+								<div class="panel media pad-all">
+									<div class="media-left">
+										<span class="icon-wrap icon-wrap-sm icon-circle bg-primary">
+										<i class="contalcob contalcob-lending contalcob-2x"></i>
+										</span>
+									</div>
+									<div class="media-body">
+										<p class="text-2x mar-no text-thin">241</p>
+										<p class="text-muted mar-no">Prestamos por Zona</p>
+									</div>
+								</div>					
+						     </div>
+						     <!-- end lending -->
+					   	  	<!--Collectors-->
+					   	  	<div class="col-md-12 col-lg-12">								
+								<div class="panel media pad-all">
+									<div class="media-left">
+										<span class="icon-wrap icon-wrap-sm icon-circle bg-primary">
+										<i class="contalcob contalcob-collector contalcob-2x"></i>
+										</span>
+									</div>
+									<div class="media-body">
+										<p class="text-2x mar-no text-thin">241</p>
+										<p class="text-muted mar-no">Cobradores por Zona</p>
+									</div>
+								</div>					
+						     </div>							
+						     <!-- end collectors -->
+					   	  </div>	
+					   </div>
+					   <!-- end widgets -->
+					</div>					
+				</div>
+				<!--Confirm Bootstrap Modal-->
+                <!--===================================================-->
+                 
+                 @ui.modal.confirm(title = "Mensaje"){
+                     <h4>
+                     	Los datos se guardaron con &eacute;xito</br>
+                     	Desea crear una nueva zona ?
+                     </h4>
+                 }
+				<!--===================================================-->
+				<!--End Confirm Bootstrap Modal-->
+  
+  <script src="@routes.Assets.at("js/app/bsp/zone/zone.js")"></script>  
+}

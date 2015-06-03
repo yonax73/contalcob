@@ -1,0 +1,125 @@
+@import resources._
+@nav(titlePage = "Negocio Contalcob"){
+
+				
+				<!--Page Title-->
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<div id="page-title">
+					<h1 id="page-title-txt" class="page-header text-overflow">Editar Negocio</h1>
+				</div>
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<!--End page title-->
+
+				<!--Page content-->
+				<!--===================================================-->
+				<div id="page-content">					
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="panel">
+
+					
+								<form id="business-frm" action="/save-business" class="form-horizontal">
+									<div class="panel-body">					
+										<!--bussiness data-->
+										<!--===================================================-->
+										<div class="panel-heading">
+											<h3 class="panel-title">Datos del negocio</h3>
+										</div>
+										<fieldset>
+											<div class="form-group">
+												<label class="col-lg-3 control-label">Nombre de Negocio</label>
+												<div class="col-lg-7">
+													<input type="text" class="form-control" id="businessName" name="businessName" placeholder="Nombre de Negocio">
+												</div>
+											</div>											
+										</fieldset>
+										<!--===================================================-->
+					
+
+										<!--user data-->
+										<!--===================================================-->
+										<hr>
+										 <h4 class="mar-btm text-thin">Datos del Usuario</h4>
+										
+										<fieldset>
+											<div class="form-group">
+												<label class="col-lg-3 control-label">Nombre Completo</label>
+												<div class="col-lg-7">
+													<input type="text" class="form-control" id="userName" name="userName" placeholder="Nombre Completo">
+												</div>
+											</div>
+										</fieldset>
+										<!--===================================================-->
+
+										<!--login data-->
+										<!--===================================================-->
+										<hr>
+										 <h4 class="mar-btm text-thin">Datos de la cuenta</h4>
+										
+										<fieldset>
+											<div class="form-group">
+												<label class="col-lg-3 control-label">Correo El&eacute;ctronico</label>
+												<div class="col-lg-7">
+													<input type="text" class="form-control" id="emailLogin" name="emailLogin" placeholder="Correo El&eacute;ctronico">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-lg-3 control-label">Nombre de usuario</label>
+												<div class="col-lg-7">
+													<input type="text" class="form-control" id="userLogin" name="userLogin" placeholder="Nombre de usuario">
+												</div>
+											</div>
+											<div id="password-content" class="form-group">
+												<label class="col-lg-3 control-label">Contrase&ntilde;a</label>
+												<div class="col-lg-7">
+													<input type="password" class="form-control" id="password" name="password" placeholder="Contrase&ntilde;a">
+												</div>
+											</div>
+											<div id="confirmPassword-content" class="form-group">
+												<label class="col-lg-3 control-label">Confirmar Contrase&ntilde;a</label>
+												<div class="col-lg-7">
+													<input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirmar Contrase&ntilde;a">
+												</div>
+											</div>
+											<div id="acceptTerms-content" class="form-group">
+												<div class="col-lg-7 col-lg-offset-3">
+													<div class="checkbox">
+														<label class="form-checkbox form-icon">
+															<input type="checkbox" id="acceptTerms" name="acceptTerms" value="acceptTerms" />Aceptar t&eacute;rminos, condiciones y pol&iacute;ticas de privacidad.
+														</label>
+													</div>
+												</div>								
+											</div> 
+										</fieldset>
+										<!--===================================================-->
+					
+									</div>	
+									<div class="panel-footer">
+										<div class="row">
+											<div class="col-lg-12">
+												<button id="save-business-btn" class="btn btn-primary btn-labeled fa fa-send fa-lg pull-right" type="submit">Guardar Datos</button>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>					
+				</div>					
+				<!--===================================================-->
+				<!--Page content-->
+
+				<!--Alert Bootstrap Modal-->
+                <!--===================================================-->
+                 
+                 @ui.modal.alert(title = "Bienvenido"){
+                     <h4>
+                     	Los datos se guardaron con &eacute;xito!
+                     </h4>
+                 }
+				<!--===================================================-->
+				<!--End Alert Bootstrap Modal-->
+
+  
+  <script src="@routes.Assets.at("js/app/bsp/business/business.js")"></script>  
+}

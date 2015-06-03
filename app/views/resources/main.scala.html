@@ -1,0 +1,36 @@
+@(title:String)(content: Html)
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Administra tus prestamos en cualquier parte del mundo.">
+		<meta name="author" content="Yonatan Alexis Quintero Rodriguez | yonax73@@gmail.com ">
+		<title>@title</title>	
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
+		<link href="@routes.Assets.at("images/contalcob/favicon.png")" rel="shortcut icon" type="image/png" >
+		<link href="@routes.Assets.at("css/bootstrap.min.css")" rel="stylesheet" media="screen" >
+		<link href="@routes.Assets.at("css/nifty.min.css")" rel="stylesheet" media="screen" >
+		<link href="@routes.Assets.at("plugins/font-awesome/css/font-awesome.min.css")" rel="stylesheet" media="screen" >
+		<link href="@routes.Assets.at("plugins/font-awesome/css/font-awesome.min.css")" rel="stylesheet" media="screen" >
+		<link href="@routes.Assets.at("plugins/contalcob/contalcob-fonts.min.css")" rel="stylesheet" media="screen" >
+		<link href="@routes.Assets.at("css/app.min.css")" rel="stylesheet" media="screen" >				
+		<link href="@routes.Assets.at("plugins/bootstrap-validator/bootstrapValidator.min.css")" rel="shortcut icon" type="image/png" >
+		
+		<link href="@routes.Assets.at("plugins/pace/pace.min.css")" rel="stylesheet" media="screen" >
+		<script src="@routes.Assets.at("plugins/pace/pace.min.js")"></script>
+
+	</head>
+	<body>
+	    <div id="container" class="effect mainnav-lg mainnav-fixed navbar-fixed">@content</div>	
+		<script src="@routes.Assets.at("js/jquery-2.1.1.min.js")"></script>
+		<script src="@routes.Assets.at("js/bootstrap.min.js")"></script>
+		<script src="@routes.Assets.at("plugins/fast-click/fastclick.min.js")"></script>
+		<script src="@routes.Assets.at("plugins/bootstrap-validator/bootstrapValidator.min.js")"></script>
+		<script src="@routes.Assets.at("plugins/mariac/utils.min.js")"></script>
+		
+		<script src="@routes.Assets.at("js/nifty.min.js")"></script>
+		<script src="@routes.Assets.at("js/app/app.min.js")"></script>
+	</body>
+</html>

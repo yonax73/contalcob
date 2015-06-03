@@ -1,0 +1,35 @@
+.cls-container {
+    height: 100vh;
+}
+
+.img-financial {
+    background-image: url("../images/bg/Financial-Life-Style.jpg");
+}
+
+.align-right {
+    display: block;
+    text-align: right;
+}
+
+/*******MODAL FULL**********************/
+/***************************************/
+.modal-xl .modal-dialog {
+    width: 100%;
+}
+
+.modal-xl .modal-body {
+    background-color: #e7ebee;
+    min-height: 360px;
+}
+/*******END MODAL FULL**********************/
+/*******************************************/
+
+/*****  SCROLL FRAME  **********************/
+/*******************************************/
+.scroll-frame {
+    max-height: 300px;
+    overflow-x: auto;
+    width: 100%;
+}
+/*******END SCROLL FRAME  *******************/
+/*******************************************/

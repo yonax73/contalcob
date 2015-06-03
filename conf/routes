@@ -1,9 +1,33 @@
-# Routes
-# This file defines all application routes (Higher priority routes first)
-# ~~~~
-
-# Home page
-GET     /                           controllers.Application.index()
-
+# Partner
+GET  /partners                      com.contalcob.bsp.partner.control.PartnerControl.partners()
+GET  /partner                       com.contalcob.bsp.partner.control.PartnerControl.partner()
+POST /search-partners               com.contalcob.bsp.partner.control.PartnerControl.search()
+GET  /load-partner                  com.contalcob.bsp.partner.control.PartnerControl.load(id:Integer)
+POST /save-partner                  com.contalcob.bsp.partner.control.PartnerControl.save()
+# Login
+GET     /                           com.contalcob.sec.login.control.LoginControl.login()
+GET     /init-app                   com.contalcob.sec.login.control.LoginControl.initApp()
+POST    /sign-in                    com.contalcob.sec.login.control.LoginControl.signIn()
+GET    /sign-out                    com.contalcob.sec.login.control.LoginControl.signOut()
+# Business
+GET     /business                   com.contalcob.bsp.business.control.BusinessControl.business()
+POST    /save-business              com.contalcob.bsp.business.control.BusinessControl.save()
+GET    /load-business               com.contalcob.bsp.business.control.BusinessControl.load()
+# Zone
+GET  /zones                         com.contalcob.bsp.zone.control.ZoneControl.zones()
+GET  /zone                          com.contalcob.bsp.zone.control.ZoneControl.zone()
+POST /search-zones                  com.contalcob.bsp.zone.control.ZoneControl.search()
+GET  /load-zone                     com.contalcob.bsp.zone.control.ZoneControl.load(id:Integer)
+POST /save-zone                     com.contalcob.bsp.zone.control.ZoneControl.save()
+GET  /remove-user-zone              com.contalcob.bsp.zone.control.ZoneControl.removeUserZone(userId:Integer,zoneId:Integer)
+GET  /add-user-zone                 com.contalcob.bsp.zone.control.ZoneControl.addUserZone(userId:Integer,zoneId:Integer)
+# User
+GET  /users                         com.contalcob.set.user.control.UserControl.users()
+GET  /user                          com.contalcob.set.user.control.UserControl.user()
+POST /search-users                  com.contalcob.set.user.control.UserControl.search()
+GET  /load-user                     com.contalcob.set.user.control.UserControl.load(id:Integer)
+POST /save-user                     com.contalcob.set.user.control.UserControl.save()
+# report
+GET     /dashboard                  com.contalcob.bsp.report.control.ReportControl.dashboard()  
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

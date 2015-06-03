@@ -1,0 +1,30 @@
+@import resources._
+@nav(titlePage = "Zonas de trabajo Contalcob"){
+
+				
+				<!--Page Title-->
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<div id="page-title">				   
+				   	<h1 id="page-title-txt" class="page-header text-overflow">Zonas de trabajo</h1>				   			
+				</div>
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<!--End page title-->
+
+				<!--Page content-->
+				<!--===================================================-->
+				<div id="page-content">					
+						<div class="col-lg-12 mar-btm align-right">
+						   	 <a href="/zone" onclick="Zone.setId(0)" class="btn btn-primary btn-labeled fa fa-plus">Crear Zona</a>	
+						</div>					   	 		
+                        <div id="without-data" class="col-lg-12 hidden">
+                            <a href="/zone" onclick="Zone.setId(0)">No Existen zonas, desea crear una ?</a>
+                        </div>                        	
+                        <div id="with-data"></div>										
+				</div>					
+				<!--===================================================-->
+				<!--Page content-->
+
+
+  
+  <script src="@routes.Assets.at("js/app/bsp/zone/zones.min.js")"></script>  
+}

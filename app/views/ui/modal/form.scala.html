@@ -1,0 +1,26 @@
+@(content: Html)
+<!--form Bootstrap Modal-->
+<!--===================================================-->
+<div class="modal fade modal-xl" id="form-modal" role="dialog" tabindex="-1" aria-labelledby="form-modal" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<!--Modal header-->
+			<div class="modal-header">
+				<button data-dismiss="modal" class="close" type="button">
+				<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 id="modal-title" class="modal-title">Formulario</h4>
+			</div>
+			<!--Modal body-->
+			<div class="modal-body">
+                @content
+			</div>
+			<!--Modal footer-->
+			<div class="modal-footer">               
+				<button id="form-modal-action-btn" class="btn btn-success" type="button">Guardar</button>				
+			</div>
+		</div>
+	</div>
+</div>
+<!--===================================================-->
+<!--End form Bootstrap Modal-->

@@ -1,0 +1,27 @@
+@(title:String)(content: Html)
+<!--confirm Bootstrap Modal-->
+<!--===================================================-->
+<div class="modal fade" id="confirm-modal" role="dialog" tabindex="-1" aria-labelledby="confirm-modal" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<!--Modal header-->
+			<div class="modal-header">
+				<button data-dismiss="modal" class="close" type="button">
+				<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title">@title</h4>
+			</div>
+			<!--Modal body-->
+			<div class="modal-body">
+                @content
+			</div>
+			<!--Modal footer-->
+			<div class="modal-footer">
+                <button data-dismiss="modal" class="btn btn-default" type="button">Cancelar</button>
+				<button id="confirm-modal-action-btn" class="btn btn-primary" type="button">Aceptar</button>				
+			</div>
+		</div>
+	</div>
+</div>
+<!--===================================================-->
+<!--End confirm Bootstrap Modal-->

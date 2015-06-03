@@ -1,0 +1,221 @@
+@(titlePage: String)(content: Html)
+@import resources._
+@main(title = titlePage){
+
+	        <!--NAVBAR-->
+		    <!--===================================================-->
+	  		<header id="navbar">
+			<div id="navbar-container" class="boxed">
+
+				<!--Brand logo & name-->
+				<!--================================-->
+				<div class="navbar-header">
+					<a href="/dashboard" class="navbar-brand">					   
+						<img src="@routes.Assets.at("images/contalcob/icon-pad-64.png")" alt="Contalcob" class="brand-icon">
+						<div class="brand-title">
+							<span class="brand-text">&nbsp;&nbsp;<span id="business-name-nav">Contalcob</span></span>
+						</div>
+					</a>
+				</div>
+				<!--================================-->
+				<!--End brand logo & name-->
+
+
+				<!--Navbar Dropdown-->
+				<!--================================-->
+				<div class="navbar-content clearfix">
+					<ul class="nav navbar-top-links pull-left">
+
+						<!--Navigation toogle button-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<li class="tgl-menu-btn">
+							<a class="mainnav-toggle" href="#">
+								<i class="fa fa-navicon fa-lg"></i>
+							</a>
+						</li>
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<!--End Navigation toogle button-->						
+
+						
+					</ul>
+					<ul class="nav navbar-top-links pull-right">
+						<!--User dropdown-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<li id="dropdown-user" class="dropdown">
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
+								<span class="pull-right">
+									<img class="img-circle img-user media-object" src="@routes.Assets.at("images/avatar/av1.png")" alt="Profile Picture">
+								</span>
+								<div id="login-name-nav" class="username hidden-xs">User Name</div>
+							</a>
+
+
+							<div class="dropdown-menu dropdown-menu-md dropdown-menu-right with-arrow panel-default">
+
+								<!-- Dropdown heading  -->
+								<div class="pad-all bord-btm">
+									<p id="user-name-nav" class="text-lg text-muted text-thin mar-btm">Full name</p>									
+								</div>
+
+
+								<!-- User dropdown menu -->
+								<ul class="head-list">
+									<li>
+										<a href="/business">
+											<i class="fa fa-user fa-fw fa-lg"></i> Perfil
+										</a>
+									</li>
+							     </ul>
+
+								<!-- Dropdown footer -->
+								<div class="pad-all text-right">
+									<a href="/sign-out" class="btn btn-primary">
+										<i class="fa fa-sign-out fa-fw"></i> Cerrar Sesi&oacute;n
+									</a>
+								</div>
+							</div>
+						</li>
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<!--End user dropdown-->
+
+					</ul>
+				</div>
+				<!--================================-->
+				<!--End Navbar Dropdown-->
+
+			</div>
+		</header>
+		<!--===================================================-->
+		<!--END NAVBAR-->
+		<div class="boxed">
+		  	<!--CONTENT CONTAINER-->
+			<!--===================================================-->
+			<div id="content-container">
+			  	@content
+			</div>
+			<!--===================================================-->
+			<!--END CONTENT CONTAINER-->
+		</div>
+			<!--MAIN NAVIGATION-->
+			<!--===================================================-->
+			<nav id="mainnav-container">
+				<div id="mainnav">
+
+					<!--Shortcut buttons-->
+					<!--================================-->
+					<div id="mainnav-shortcut">
+						<ul class="list-unstyled">
+							<li class="col-xs-4" data-content="Crear Cliente">
+								<a id="demo-toggle-aside" class="shortcut-grid" href="/partner" onclick="Partner.setId(0)">
+									<i class="fa fa-user"></i>
+								</a>
+							</li>
+							<li class="col-xs-4" data-content="Crear Pr&eacute;stamo">
+								<a id="demo-alert" class="shortcut-grid" href="#">
+									<i class="contalcob contalcob-lending"></i>
+								</a>
+							</li>
+							<li class="col-xs-4" data-content="Crear Recaudador ">
+								<a id="demo-page-alert" class="shortcut-grid" href="/user" onclick="User.setId(0)">
+									<i class="contalcob contalcob-collector">								
+									</i>	
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!--================================-->
+					<!--End shortcut buttons-->
+
+
+					<!--Menu-->
+					<!--================================-->
+					<div id="mainnav-menu-wrap">
+						<div class="nano">
+							<div class="nano-content">
+								<ul id="mainnav-menu" class="list-group">
+						            <!--Category name-->
+									<li class="list-header">Reportes</li>
+									<!--Menu list item-->
+									<li id="dashboard-nav">
+										<a href="/dashboard">
+											<i class="fa fa-dashboard"></i>
+											<span class="menu-title">
+												<strong>Tablero</strong>
+											</span>
+										</a>
+									</li>
+									<!--Category name-->
+									<li class="list-header">Unidades de Negocio</li>
+
+									<!--Menu list item-->
+									<li id="zone-nav">
+										<a href="/zones">
+											<i class="fa fa-globe"></i>
+											<span class="menu-title">
+												<strong>Zonas</strong>
+											</span>
+										</a>
+									</li>
+									<!--Menu list item-->
+									<li id="clients-nav" >
+										<a href="/partners">
+											<i class="fa fa-user"></i>
+											<span class="menu-title">
+												<strong>Clientes</strong>
+											</span>
+										</a>
+									</li>
+									<!--Menu list item-->
+									<li id="lending-nav">
+										<a href="#">
+											<i class="contalcob contalcob-lending"></i>
+											<span class="menu-title">
+												<strong>Prestamos</strong>
+											</span>
+										</a>
+									</li>
+									<!--Menu list item-->
+									<li id="business-nav">
+										<a href="/business">
+											<i class="fa fa-bank"></i>
+											<span class="menu-title">
+												<strong>Negocio</strong>
+											</span>
+										</a>
+									</li>
+									<li class="list-divider"></li>
+									<!--Category name-->
+									<li class="list-header">Sistema</li>						
+									<!--Menu list item-->
+									<li id="collector-nav">
+										<a href="/users">
+											<i class="contalcob contalcob-collector"></i>
+											<span class="menu-title">
+												<strong>Recaudadores</strong>
+											</span>											
+										</a>
+									</li>
+                                    <li class="list-divider"></li>				
+									<!--Menu list item-->
+									<li>
+										<a href="/sign-out">
+											<i class="fa fa-sign-out"></i>
+											<span class="menu-title">
+												<strong>Cerrar sesi&oacute;n</strong>
+											</span>											
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!--================================-->
+					<!--End menu-->
+
+				</div>
+			</nav>
+			<!--===================================================-->
+			<!--END MAIN NAVIGATION-->		
+
+
+}

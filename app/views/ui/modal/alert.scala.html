@@ -1,0 +1,26 @@
+@(title:String)(content: Html)
+<!--Alert Bootstrap Modal-->
+<!--===================================================-->
+<div class="modal fade" id="alert-modal" role="dialog" tabindex="-1" aria-labelledby="alert-modal" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<!--Modal header-->
+			<div class="modal-header">
+				<button data-dismiss="modal" class="close" type="button">
+				<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title">@title</h4>
+			</div>
+			<!--Modal body-->
+			<div class="modal-body">
+                @content
+			</div>
+			<!--Modal footer-->
+			<div class="modal-footer">
+				<button id="alert-modal-action-btn" class="btn btn-primary" type="button">Aceptar</button>				
+			</div>
+		</div>
+	</div>
+</div>
+<!--===================================================-->
+<!--End Alert Bootstrap Modal-->

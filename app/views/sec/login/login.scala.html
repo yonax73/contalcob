@@ -1,0 +1,71 @@
+@import resources._
+@main("Login ContalCob"){
+<div class="cls-container">
+<!-- BACKGROUND IMAGE -->
+		<!--===================================================-->
+		<div id="bg-overlay" class="bg-img img-financial"></div>
+		
+		
+		<!-- HEADER -->
+		<!--===================================================-->
+		<div class="cls-header cls-header-lg">
+			<div class="cls-brand">
+				<a class="box-inline" href="#">					
+					<!-- <span class="brand-title">Contalcob <span class="text-thin">Admin</span></span> -->
+			       <img class="" src="@routes.Assets.at("images/contalcob/logo.png")" alt="Profile Picture">								
+				</a>
+			</div>
+		</div>
+		<!--===================================================-->
+		
+		
+		<!-- LOGIN FORM -->
+		<!--===================================================-->
+		<div class="cls-content">
+			<div class="cls-content-sm panel">
+				<div class="panel-body">
+					<p class="pad-btm">Ingresa tus datos</p>
+					<form id="sign-in-frm" action="/sign-in">
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-addon"><i class="fa fa-bank"></i></div>
+								<input type="text" class="form-control" name="businessName" placeholder="Nombre de Negocio">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-addon"><i class="fa fa-user"></i></div>
+								<input type="text" class="form-control" name="userLogin" placeholder="Nombre de Usuario">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-addon"><i class="fa fa-asterisk"></i></div>
+								<input type="password" class="form-control" name="password" placeholder="Contrase&ntilde;a">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-8 text-left checkbox">
+								<label class="form-checkbox form-icon">
+								<input type="checkbox"> Recordar mis datos
+								</label>
+							</div>
+							<input type="hidden" value="0" id="loginType" name="loginType"/>
+							<div class="col-xs-4">
+								<div class="form-group text-right">
+								<button class="btn btn-success text-uppercase" type="submit">Ingresar</button>
+								</div>
+							</div>
+						</div>						
+					</form>
+				</div>
+			</div>
+			<div class="pad-ver">
+				<a href="#pages-password-reminder" class="btn-link mar-rgt">Olvido su contrase&ntilde;a ?</a>
+				<!-- <a href="/business" class="btn-link mar-lft">Crear cuenta</a> -->
+			</div>
+		</div>
+		<!--===================================================-->
+    </div>
+    <script src="@routes.Assets.at("js/app/sec/login/login.js")"></script>  
+}

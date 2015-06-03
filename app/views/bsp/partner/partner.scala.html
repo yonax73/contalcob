@@ -1,0 +1,55 @@
+@import resources._
+@nav(titlePage = "Cliente Contalcob"){
+
+
+<!--Page Title-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div id="page-title">
+	<h1 id="page-title-txt" class="page-header text-overflow">Crear Cliente</h1>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--End page title-->
+
+<!--Page content-->
+<!--===================================================-->
+<div id="page-content">					
+	<div class="row">
+		<div id="toolbar" class="col-lg-12 mar-btm align-right hidden">			
+			<a href="#" onclick="newLending()" class="btn btn-primary btn-labeled fa fa-plus">Nuevo Prestamo</a>
+			<a href="#" onclick="newPartner()" class="btn btn-primary btn-labeled fa fa-plus">Crear Cliente</a>
+		</div>	
+		<div class="col-lg-7">
+			<div class="panel">					
+				<form id="partner-frm" action="/save-partner" class="form-horizontal">
+					<div class="panel-body">					
+						<!--partner data-->
+						<!--===================================================-->
+						<div class="panel-heading">
+							<h3 class="panel-title">Datos del Cliente</h3>
+						</div>
+						@form.bsp.partner.partner() 
+						<!--===================================================-->
+						
+						
+						<!--location data-->
+						<!--===================================================-->
+						<hr>
+						<h4 class="mar-btm text-thin">Datos de Ubicaci&oacute;n</h4>
+						@form.set.location.location()										
+						<!--===================================================-->
+						
+					</div>	
+					<div class="panel-footer">
+						<div class="row">
+							<div class="col-lg-12">
+								<button id="save-partner-btn" class="btn btn-primary btn-labeled fa fa-send fa-lg pull-right" type="submit">Guardar Datos</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>					
+</div>  
+<script src="@routes.Assets.at("js/app/bsp/partner/partner.min.js")"></script>  
+}
